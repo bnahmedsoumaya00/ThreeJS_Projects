@@ -12,7 +12,6 @@ camera.position.z = 5;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(w, h);
 document.body.appendChild(renderer.domElement);
-// THREE.ColorManagement.enabled = true;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 
@@ -25,14 +24,14 @@ const loader = new THREE.TextureLoader();
 
 const geometry = new THREE.IcosahedronGeometry(1, detail);
 const texture = loader.load("./textures/8081_earthmap10k.jpg");
-// texture.colorSpace = THREE.SRGBColorSpace;
+texture.colorSpace = THREE.SRGBColorSpace;
 const material = new THREE.MeshPhongMaterial({
   map: texture ,
   specularMap: loader.load("./textures/8081_earthspec10k.jpg"),
   bumpMap: loader.load("./textures/8081_earthbump10k.jpg"),
   bumpScale: 0.04,
 });
-// material.map.colorSpace = THREE.SRGBColorSpace;
+
 const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
 
@@ -49,7 +48,7 @@ const cloudsMat = new THREE.MeshStandardMaterial({
   opacity: 0.8,
   blending: THREE.AdditiveBlending,
   alphaMap: loader.load('./textures/earthcloudmaptrans.jpg'),
-  // alphaTest: 0.3,
+
 });
 const cloudsMesh = new THREE.Mesh(geometry, cloudsMat);
 cloudsMesh.scale.setScalar(1.003);
