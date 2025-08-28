@@ -21,7 +21,7 @@ It recreates a **3D interactive Earth** in the browser with rotation, textures, 
 ## 🖼️ Preview  
 Here's a  static preview of the project:  
 
-**Earth Previw **  
+
 ![Earth Preview 1](earth.gif)  
 
 
