@@ -10,7 +10,7 @@ So even though the result here is "just" a rotating yellow cube, for me it repre
 
 ## ✨ Features  
 - A **3D yellow cube** created with `BoxGeometry`  
-- Smooth **rotation on the Y-axis**  
+- Smooth **rotation on the and X-axis Y-axis**  
 - **OrbitControls** for camera zoom and cursor interaction  
 - Responsive canvas that adapts to window size  
 - Simple **hemisphere lighting** for depth  
