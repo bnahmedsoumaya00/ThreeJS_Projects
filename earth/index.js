@@ -22,11 +22,14 @@ scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 const detail = 12;
 const loader = new THREE.TextureLoader();
+
 const geometry = new THREE.IcosahedronGeometry(1, detail);
+const texture = loader.load("./textures/8081_earthmap10k.jpg");
+// texture.colorSpace = THREE.SRGBColorSpace;
 const material = new THREE.MeshPhongMaterial({
-  map: loader.load("./textures/earthmap1k.jpg"),
-  specularMap: loader.load("./textures/earthspec1k.jpg"),
-  bumpMap: loader.load("./textures/earthbump1k.jpg"),
+  map: texture ,
+  specularMap: loader.load("./textures/8081_earthspec10k.jpg"),
+  bumpMap: loader.load("./textures/8081_earthbump10k.jpg"),
   bumpScale: 0.04,
 });
 // material.map.colorSpace = THREE.SRGBColorSpace;
@@ -34,7 +37,7 @@ const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
 
 const lightsMat = new THREE.MeshBasicMaterial({
-  map: loader.load("./textures/earthlights1k.jpg"),
+  map: loader.load("./textures/8081_earthlights10k.jpg"),
   blending: THREE.AdditiveBlending,
 });
 const lightsMesh = new THREE.Mesh(geometry, lightsMat);
