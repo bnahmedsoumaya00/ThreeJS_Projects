@@ -10,13 +10,13 @@ This project is my very first experiment with **Three.js**, where I created and 
 - Responsive rendering that adapts to the browser window size.  
 
 ## 🖼️ Preview  
-Here are two static previews of the shape (note: the images do not show the animation):  
+Here are two static previews of the shape :  
 
-**Image 1**  
-![Shape Preview 1](Image.png)  
+**Preview 1**  
+![Shape Preview 1](shapemov.gif)  
 
-**Image 2**  
-![Shape Preview 2](Image2.png)  
+**Preview 2**  
+![Shape Preview 2](shapezoom.gif)  
 
  
 ## 📚 What I Learned  
